@@ -69,3 +69,8 @@ class ArvoreBinaria:
             return p.grau()
         else:
             return None
+    def isBalanceada(self):
+        if (self.raiz.fatBal() > -2 and self.raiz.fatBal() < 2):
+            return True
+        else:
+            return False
