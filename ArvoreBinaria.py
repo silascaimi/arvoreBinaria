@@ -58,7 +58,7 @@ class ArvoreBinaria:
         return self.raiz.nivel()
 
     def isBinariaCompleta():
-        if ((self.altura() + 1) * (self.altura() + 1)) == (self.cont + 1):
+        if ((self.cont + 1) == (2 ** (self.altura() + 1))):
             return True
         else:
             return False
@@ -69,6 +69,7 @@ class ArvoreBinaria:
             return p.grau()
         else:
             return None
+
     def isBalanceada(self):
         if (self.raiz.fatBal() > -2 and self.raiz.fatBal() < 2):
             return True
