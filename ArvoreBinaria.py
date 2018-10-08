@@ -52,12 +52,12 @@ class ArvoreBinaria:
         else:
             return None
 
-    def altura():
+    def altura(self):
         if (self.isEmpty()):
             raise Exception("Árvore inexistente")
         return self.raiz.nivel()
 
-    def isBinariaCompleta():
+    def isBinariaCompleta(self):
         if ((self.cont + 1) == (2 ** (self.altura() + 1))):
             return True
         else:
@@ -70,8 +70,10 @@ class ArvoreBinaria:
         else:
             return None
 
+     #necessario correcao
     def isBalanceada(self):
-        if (self.raiz.fatBal() > -2 and self.raiz.fatBal() < 2):
-            return True
-        else:
+        aux = self.raiz
+        if ():
             return False
+        else:
+            return True

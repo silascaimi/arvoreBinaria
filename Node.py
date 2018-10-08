@@ -51,4 +51,6 @@ class Node:
     def fatBal(self):
         return self.pesoDir() - self.pesoEsq()
 
-
+    def isBalanceado(self):
+        x = True if self.fatBal() > -2 and self.fatBal() < 2 else False
+        return x
