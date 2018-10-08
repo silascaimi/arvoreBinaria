@@ -73,7 +73,7 @@ class ArvoreBinaria:
      #necessario correcao
     def isBalanceada(self):
         aux = self.raiz
-        if ():
+        if (aux):
             return False
         else:
             return True
