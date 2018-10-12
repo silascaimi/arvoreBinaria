@@ -104,6 +104,7 @@ class ArvoreBinaria:
         orf2.pai = p
 
     def pesquisar(self, info):
+        """Pesquisa um nó através do seu conteúdo"""
         aux = self.raiz
         p = self.raiz
         while(info != p.info and aux != None):
@@ -118,6 +119,7 @@ class ArvoreBinaria:
             return None
 
     def altura(self):
+        """Consulta a altura da ávore"""
         if (self.isEmpty()):
             raise Exception("Árvore inexistente")
         return self.raiz.nivel()
@@ -140,16 +142,16 @@ class ArvoreBinaria:
         else:
             return None
 
-    def isBalanceada(self, node = None):
+    def isAVL(self, node = None):
         if node == None:
             node = self.raiz 
         if not node.isBalanceado():
             return False
         else:
             if node.se:
-                self.isBalanceada(node.se)
+                self.isAVL(node.se)
             if node.sd:
-                self.isBalanceada(node.sd)
+                self.isAVL(node.sd)
         return True
 
     def isEstritamente(self, node = None):
@@ -161,3 +163,4 @@ class ArvoreBinaria:
             if node.se and node.sd:
                 return self.isEstritamente(node.se) and self.isEstritamente(node.sd)
         return False
+
