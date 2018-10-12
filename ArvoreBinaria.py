@@ -45,6 +45,10 @@ class ArvoreBinaria:
                 self.cont += 1
 
     def remover(self,info):
+        """
+        Remove um nó da árvore
+        Não remove raiz, necessário adaptar
+        """
         info = int(info)
         aux = self.raiz
         p = self.raiz
@@ -56,6 +60,7 @@ class ArvoreBinaria:
                 aux = p.sd
         if (p and p.info == info):
             nopai = p.pai
+            self.cont -= 1
             if (p.se == None and p.sd == None):
                 if (nopai.se == p):
                     nopai.se = None
@@ -127,7 +132,7 @@ class ArvoreBinaria:
     def isBinariaCompleta(self):
         """
         Verifica matematicamente se a árvore é binária completa
-        Sabendo que 2 elevado a altura da árvore + 1 é igual a quantidade nós da árvore + 1
+        Sabendo que 2 elevado a altura da árvore + 1 é igual a quantidade de nós da árvore + 1
         """
         if ((self.cont + 1) == (2 ** (self.altura() + 1))):
             return True
